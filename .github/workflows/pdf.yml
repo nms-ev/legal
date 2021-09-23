@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    tags:
-      - "v*"
 
 jobs:
   build:
@@ -22,12 +20,12 @@ jobs:
       - name: Upload pdf
         uses: actions/upload-artifact@v2
         with:
-          name: Satzung
-          path: Satzung.pdf
+          name: PDFs
+          path: "*.pdf"
       - name: Release
+        if: startsWith(github.ref, 'refs/tags/v')
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
-          prerelease: true
           artifacts: "*.pdf"
           token: ${{ secrets.GITHUB_TOKEN }}
