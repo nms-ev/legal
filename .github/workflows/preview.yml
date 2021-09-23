@@ -1,4 +1,4 @@
-name: "Build LaTex Document"
+name: "Build Preview"
 
 on:
   push:
