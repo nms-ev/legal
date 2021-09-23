@@ -20,3 +20,9 @@ jobs:
         with:
           name: Satzung
           path: Satzung.pdf
+      - uses: ncipollo/release-action@v1
+        with:
+          allowUpdates: true
+          prerelease: true
+          artifacts: "*.pdf"
+          token: ${{ secrets.GITHUB_TOKEN }}
