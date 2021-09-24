@@ -16,7 +16,9 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Run Tectonic
-        run: tectonic *.tex
+        run: |
+          tectonic Satzung.tex
+          tectonic Vereinsordnung.tex
       - name: Release
         uses: ncipollo/release-action@v1
         with:
