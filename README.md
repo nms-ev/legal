@@ -2,6 +2,10 @@
 
 This repo includes all the legal documents for the nms e.V.
 
+## Where can I see the documents?
+
+You can find the [latest version here](https://github.com/nms-ev/legal/releases/latest) and all the older versions unter [releases](https://github.com/nms-ev/legal/releases)
+
 ## Building
 
 You need to install [tectonic](https://tectonic-typesetting.github.io).
