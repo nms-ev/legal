@@ -1,12 +1,37 @@
 \documentclass[fontsize=12pt,parskip=half] {scrartcl}
-\usepackage{lmodern}
+\usepackage{helvet}
+
+% Use non-serif font
+\renewcommand{\familydefault}{\sfdefault}
+
 \usepackage{textcomp}
+\usepackage[T1]{fontenc}
 \usepackage[shortlabels]{enumitem}
 \usepackage[clausemark=forceboth,juratotoc, juratocnumberwidth=2.5em]{scrjura}
 \usepackage{eurosym}
 \usepackage{csquotes}
 \usepackage{pgffor}
+\usepackage[ngerman]{babel}
+
+\usepackage{sectsty}
+\sectionfont{\centering}
+
 
 \MakeOuterQuote{"}
 
-\newcommand\name{nms e.V.}
+% Custom headers and footers
+\usepackage{fancyhdr}
+\fancypagestyle{body}{%
+\fancyhf{}
+\fancyhead[CO]{\hrule}
+\fancyfoot[C]{\hrulefill\quad\raisebox{-3pt}{\thepage}\quad\hrulefill}
+\renewcommand{\headrulewidth}{0pt}
+}
+\fancypagestyle{title}{%
+\fancyhf{}
+\fancyfoot[C]{\hrulefill\quad\raisebox{-3pt}{\thepage}\quad\hrulefill}
+\renewcommand{\headrulewidth}{0pt}
+}
+\pagestyle{title}
+
+\newcommand\name{nms e.V. }
