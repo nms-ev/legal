@@ -1,13 +1,44 @@
 \documentclass[fontsize=12pt,parskip=half] {scrartcl}
 \usepackage{lmodern}
+
+% Use non-serif font
+\renewcommand{\familydefault}{\sfdefault}
+
 \usepackage{textcomp}
 \usepackage[shortlabels]{enumitem}
 \usepackage[clausemark=forceboth,juratotoc, juratocnumberwidth=2.5em]{scrjura}
 \usepackage{eurosym}
 \usepackage{csquotes}
 \usepackage{pgffor}
+\usepackage[ngerman]{babel}
+
+% Center section titles
+\usepackage{sectsty}
+\sectionfont{\centering}
+
+% Center all Paragraph headings
+\makeatletter
+\addtokomafont{contract.Clause}{\centering\def\@hangfrom{\relax}}
+\makeatother
+\renewcommand{\Clauseformat}[1]{\S~#1}
 
 \MakeOuterQuote{"}
 
-\newcommand\name{nms e.V.}
+% Custom headers and footers
+\usepackage{fancyhdr}
+\fancypagestyle{body}{%
+\fancyhf{}
+\fancyhead[CO]{\hrule}
+\fancyfoot[C]{\hrulefill\quad\raisebox{-3pt}{\thepage}\quad\hrulefill}
+\renewcommand{\headrulewidth}{0pt}
+}
+\fancypagestyle{title}{%
+\fancyhf{}
+\fancyfoot[C]{\hrulefill\quad\raisebox{-3pt}{\thepage}\quad\hrulefill}
+\renewcommand{\headrulewidth}{0pt}
+}
+\pagestyle{title}
+
+\newcommand\name{nms e.V. }
 \newcommand\version{v1.0.0-rc.0}
+
