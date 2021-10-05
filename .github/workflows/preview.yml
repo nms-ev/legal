@@ -17,9 +17,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Run Tectonic
-        run: |
-          tectonic Satzung.tex
-          tectonic Vereinsordnung.tex
+        run: make
       - name: Upload PDFs
         uses: actions/upload-artifact@v2
         with:
