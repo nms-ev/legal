@@ -22,7 +22,11 @@
 \makeatother
 \renewcommand{\Clauseformat}[1]{\S~#1}
 
-\MakeOuterQuote{"}
+% Draft
+\usepackage{draftwatermark}
+\SetWatermarkText{Entwurf}
+\SetWatermarkScale{15}
+\SetWatermarkColor[gray]{0.95}
 
 % Custom headers and footers
 \usepackage{fancyhdr}
@@ -40,5 +44,5 @@
 \pagestyle{title}
 
 \newcommand\name{nms e.V.}
-\newcommand\version{v1.0.0-rc.1}
+\newcommand\version{v1.0.0-rc.2}
 
