@@ -16,7 +16,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Run Tectonic
-        run: make
+        run: make tectonic
       - name: Release
         uses: ncipollo/release-action@v1
         with:
