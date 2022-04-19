@@ -17,7 +17,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Run Tectonic
-        run: make
+        run: make tectonic
       - name: Upload PDFs
         uses: actions/upload-artifact@v2
         with:
