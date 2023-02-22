@@ -10,13 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - uses: wtfjoke/setup-tectonic@v1
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/build
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Run Tectonic
-        run: make tectonic
+
       - name: Release
         uses: ncipollo/release-action@v1
         with:
