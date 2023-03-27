@@ -1,7 +1,7 @@
-tectonic:
+tectonic::
 	tectonic Satzung.tex
 	tectonic Vereinsordnung.tex
-pdflatex:
+pdflatex::
 	pdflatex -interaction=batchmode Satzung.tex
-clean:
+clean::
 	rm -f *.log *.synctex.gz *.aux *.out *.toc
